@@ -1,0 +1,35 @@
+## for visual studio 2010
+# User-specific files
+*.suo
+*.user
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.opensdf
+*.sdf
+
+# class diagram
+*.cd
+
+## for Keil
+*.uvgui*
+*.axf
+*.crf
+*.d
+*.dep
+*.htm
+*.iex
+*.ini
+*.lnp
+*.lst
+*.map
+*.o
+*.plg
+*.sct
+*.tra
+*Log.txt
