@@ -11,3 +11,6 @@ ipch/
 *.aps
 *.opensdf
 *.sdf
+
+# Class Diagram
+*.cd
