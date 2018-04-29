@@ -1,0 +1,29 @@
+// ThreadTest.idl : ThreadTest.exe 的类型库源
+
+// 此文件将由 MIDL 编译器处理以产生
+// 类型库(ThreadTest.tlb)。
+
+[ uuid(C297CF72-A6D8-454B-9EC5-7ADB6A449098), version(1.0) ]
+library ThreadTest
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  CThreadTestDoc 的主调度接口
+	
+	[ uuid(00766A2F-1623-4D44-964D-9A885F70057B) ]
+	dispinterface IThreadTest
+	{
+		properties:
+			
+		methods:
+	};
+
+	//  CThreadTestDoc 的类信息
+	
+	[ uuid(A3EA9976-1C41-43F7-B793-FD5953D9BECB) ]
+	coclass ThreadTest
+	{
+		[default] dispinterface IThreadTest;
+	};
+};
