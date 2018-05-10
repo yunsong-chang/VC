@@ -10,3 +10,10 @@
 Attention:
 当目录中有未被git管理的文件时，切换分支目录不会自动消失
 可以放心删除不想看到的目录
+
+Branch List	Project List	
+
+Calc		计算器或作为测试工程
+Thread		多线程
+TimeTimer	时间操作和定时器
+UserMsg		自定义消息
