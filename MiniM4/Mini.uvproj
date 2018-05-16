@@ -397,16 +397,6 @@
               <FileType>2</FileType>
               <FilePath>.\Source\ARM\startup_ARMCM4.s</FilePath>
             </File>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>system_ARMCM4.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\system_ARMCM4.c</FilePath>
-            </File>
           </Files>
         </Group>
       </Groups>

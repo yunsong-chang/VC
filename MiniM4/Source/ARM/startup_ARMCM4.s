@@ -121,8 +121,8 @@ __Vectors_Size  EQU     __Vectors_End - __Vectors
 
 Reset_Handler   PROC
                 EXPORT  Reset_Handler             [WEAK]
-                IMPORT  SystemInit
-                IMPORT  __main
+                ;IMPORT  SystemInit
+                ;IMPORT  __main
 				;;; ‘À––ram@0x1000_4000
 				LDR     R0, =0x5555
 				LDR     R1, =0x40040000            ; 0x40040000: spi, 0x40041FF0: RW_STORE0
@@ -131,9 +131,9 @@ Reset_Handler   PROC
 				LDR     R0, =0xAAAA
 				STR     R0, [R1]
 				LDR     R2, [R1]
-                LDR     R0, =SystemInit
+                ;LDR     R0, =SystemInit
                 BLX     R0
-                LDR     R0, =__main
+                ;LDR     R0, =__main
                 BX      R0
                 ENDP
 
@@ -241,28 +241,28 @@ SPI_IRQHandler
 
 ; User Initial Stack & Heap
 
-                IF      :DEF:__MICROLIB
+                ; IF      :DEF:__MICROLIB
                 
-                EXPORT  __initial_sp
-                EXPORT  __heap_base
-                EXPORT  __heap_limit
+                ; EXPORT  __initial_sp
+                ; EXPORT  __heap_base
+                ; EXPORT  __heap_limit
                 
-                ELSE
+                ; ELSE
                 
-                IMPORT  __use_two_region_memory
-                EXPORT  __user_initial_stackheap
+                ; IMPORT  __use_two_region_memory
+                ; EXPORT  __user_initial_stackheap
 
-__user_initial_stackheap PROC
-                LDR     R0, =  Heap_Mem
-                LDR     R1, =(Stack_Mem + Stack_Size)
-                LDR     R2, = (Heap_Mem +  Heap_Size)
-                LDR     R3, = Stack_Mem
-                BX      LR
-                ENDP
+; __user_initial_stackheap PROC
+                ; LDR     R0, =  Heap_Mem
+                ; LDR     R1, =(Stack_Mem + Stack_Size)
+                ; LDR     R2, = (Heap_Mem +  Heap_Size)
+                ; LDR     R3, = Stack_Mem
+                ; BX      LR
+                ; ENDP
 
-                ALIGN
+                ; ALIGN
 
-                ENDIF
+                ; ENDIF
 
 
                 END
