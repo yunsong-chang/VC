@@ -123,6 +123,14 @@ Reset_Handler   PROC
                 EXPORT  Reset_Handler             [WEAK]
                 IMPORT  SystemInit
                 IMPORT  __main
+				;;; ‘À––ram@0x1000_4000
+				LDR     R0, =0x5555
+				LDR     R1, =0x40040000            ; 0x40040000: spi, 0x40041FF0: RW_STORE0
+				STR     R0, [R1]
+				LDR     R2, [R1]
+				LDR     R0, =0xAAAA
+				STR     R0, [R1]
+				LDR     R2, [R1]
                 LDR     R0, =SystemInit
                 BLX     R0
                 LDR     R0, =__main
